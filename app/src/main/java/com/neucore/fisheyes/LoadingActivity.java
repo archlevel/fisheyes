@@ -41,7 +41,7 @@ public class LoadingActivity extends Activity{
 		getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_loading);
-		//startActivity(new Intent(LoadingActivity.this, CameraSettingsTabActivity.class));
+		startActivity(new Intent(LoadingActivity.this, CameraSettingsTabActivity.class));
 		final MyViewerHelper myViewerHelper = MyViewerHelper.getInstance(getApplicationContext());
 		myViewerHelper.setLoginListener(new MyViewerHelper.LoginListener() {
 			

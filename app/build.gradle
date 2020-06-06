@@ -1,12 +1,12 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 28
+    compileSdkVersion 26
     //buildToolsVersion "29.0.2"
     defaultConfig {
         applicationId "com.neucore.fisheyes"
-        minSdkVersion 25
-        targetSdkVersion 28
+        minSdkVersion 21
+        targetSdkVersion 26
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.test.runner.AndroidJUnitRunner"
@@ -17,8 +17,10 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
-    applicationVariants.all{
-
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ["libs"]
+        }
     }
 }
 
